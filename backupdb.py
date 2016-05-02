@@ -31,7 +31,6 @@ class TransferData:
         """upload a file to Dropbox using API v2
         """
         dbx = dropbox.Dropbox(self.access_token)
-        # files_upload(f, path, mode=WriteMode('add', None), autorename=False, client_modified=None, mute=False)
 
         with open(file_from, 'rb') as f:
             dbx.files_upload(f, file_to)
